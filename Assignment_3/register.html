@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Registration — CampusFest 2025</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="event-title">CampusFest 2025</h1>
+      </div>
+      <nav class="main-nav container">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="register.html">Register</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact / FAQs</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2>Participant Registration</h2>
+      <form id="regForm" class="reg-form" autocomplete="off">
+        <label>
+          Full Name
+          <input type="text" id="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" id="email" required />
+        </label>
+
+        <label>
+          Phone
+          <input
+            type="tel"
+            id="phone"
+            pattern="[0-9]{10}"
+            required
+            placeholder="10 digit"
+          />
+        </label>
+
+        <label>
+          College / Institution
+          <input type="text" id="college" required />
+        </label>
+
+        <label>
+          Event (select one)
+          <select id="eventSelect" required>
+            <option value="">-- choose event --</option>
+            <option>Hackathon (team)</option>
+            <option>Coding Contest (individual)</option>
+            <option>Robotics Challenge (team)</option>
+            <option>Quiz Bee (team)</option>
+            <option>Design & Poster</option>
+            <option>Music & Dance</option>
+          </select>
+        </label>
+
+        <label>
+          Are you a team captain?
+          <select id="captain" required>
+            <option value="">-- select --</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit Registration</button>
+          <button type="button" id="downloadCsv" class="btn alt">
+            Download CSV
+          </button>
+        </div>
+
+        <p id="formMessage" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© CampusFest 2025</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
